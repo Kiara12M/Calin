@@ -1,0 +1,20 @@
+.checkout-wrapper {
+  min-height: 80vh;
+}
+
+.text-primary-custom {
+  color: #9e7861;
+}
+
+.btn-primary-custom {
+  background-color: #9e7861;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #7b5b48;
+    color: white;
+    transform: translateY(-2px);
+  }
+}

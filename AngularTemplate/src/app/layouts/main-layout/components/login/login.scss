@@ -1,0 +1,110 @@
+.login-container {
+    animation: fadeIn 0.8s ease-out;
+    min-height: 70vh;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(90, 70, 52, 0.15);
+    width: 100%;
+    max-width: 450px;
+    overflow: hidden;
+}
+
+.login-header {
+    background: linear-gradient(135deg, #f5f1e8, #edd8bd);
+    padding: 30px 20px 20px;
+    border-bottom: 1px solid rgba(90, 70, 52, 0.1);
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.name-titulo {
+    color: #5a4634;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.section-titulo {
+    color: #5a4634;
+    font-weight: 700;
+}
+
+.input-group-costum {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    padding: 5px 15px;
+    border: 1px solid rgba(90, 70, 52, 0.2);
+    transition: all 0.3s ease;
+}
+
+.input-group-costum:focus-within {
+    background: #fff;
+    border-color: #5a4634;
+    box-shadow: 0 0 0 0.25rem rgba(90, 70, 52, 0.25);
+}
+
+.input-group-costum .icon {
+    color: #9e7861;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.input-group-costum .form-control {
+    border: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.input-group-costum .form-control:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-btn-signup {
+    background-color: #5a4634;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-btn-signup:hover:not(:disabled) {
+    background-color: #9e7861;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(90, 70, 52, 0.4);
+}
+
+.btn-btn-signup:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.footer-links a {
+    color: #9e7861;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #5a4634;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,29 @@
+<div class="container mt-4 mb-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/" class="link-custom">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Accesorios</li>
+        </ol>
+    </nav>
+
+    <h2 class="mb-4 text-center section-titulo mt-4">Accesorios para Amantes del Café y Té</h2>
+    <div class="row mb-5 g-4 justify-content-center">
+        <div class="col-md-3 col-sm-6" *ngFor="let producto of accesoriosList">
+            <div class="card h-100 text-center shadow-sm product-card hover-lift">
+                <img src="/columna4_new.png" class="card-img-top p-3" alt="{{ producto.nombre }}" style="max-height: 250px; object-fit: contain;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">{{ producto.nombre }}</h5>
+                    <p class="card-text text-muted flex-grow-1">{{ producto.descripcion }}</p>
+                    <p class="fw-bold fs-5 text-primary-custom">{{ producto.precio | currency:'EUR':'symbol' }}</p>
+                    
+                    <div class="input-group mb-3 w-75 mx-auto">
+                        <span class="input-group-text bg-white">Ud:</span>
+                        <input type="number" class="form-control text-center" [(ngModel)]="producto.cantidad" min="1" max="99">
+                    </div>
+                    
+                    <button class="btn btn-btn-signup w-100 rounded-pill" (click)="comprar(producto)">COMPRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

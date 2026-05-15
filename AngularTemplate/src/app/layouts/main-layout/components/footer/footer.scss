@@ -1,0 +1,40 @@
+.footer-cafe {
+  background-color: #8e6639;
+  color: #e8e3d9; /* Beige suave */
+}
+
+.footer-slogan {  /* Slogan */
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.footer-icon {
+  font-size: 2rem;
+  color: #c7a17a; /* Dorado café */
+}
+
+.footer-title {  /* Títulos */
+  color: #c7a17a;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.footer-cafe a {  /* Enlaces */
+  color: #e8e3d9;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.footer-cafe a:hover {
+  color: #c7a17a;
+}
+
+.footer-cafe i {  /* Redes sociales */
+  font-size: 1.4rem;
+}
+
+.footer-copy {  /* Línea inferior */
+  color: #cfcac2;
+  font-size: 0.9rem;
+}

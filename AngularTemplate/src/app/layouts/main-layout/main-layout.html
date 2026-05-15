@@ -1,0 +1,7 @@
+<app-header (toggleCart)="toggleCart()"></app-header>
+
+<router-outlet></router-outlet>
+
+<app-cart [isOpen]="isCartOpen" (closeCart)="isCartOpen = false"></app-cart>
+
+<app-footer></app-footer>

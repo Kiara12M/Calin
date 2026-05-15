@@ -1,0 +1,43 @@
+<div class="login-container d-flex justify-content-center align-items-center mb-4 mt-5">
+    <div class="login-card shadow-lg">
+       <div class="login-header text-center">
+            <div class="logo">
+                <img src="/logo2.2.png" alt="Calin Logo">
+            </div>
+           <h2 class="name-titulo">CALIN</h2>
+       </div>
+
+        <div class="login-body p-4">
+            <h3 class="text-center section-titulo mb-4">INICIAR SESIÓN</h3>
+
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="input-group-costum mb-3">
+                    <span class="icon">
+                        <i class="bi bi-envelope-at"></i>
+                    </span>
+                    <input type="email" formControlName="email" class="form-control" placeholder="Correo Electrónico">
+                </div>
+                <small class="text-danger d-block mb-2" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+                    Ingresa un correo válido
+                </small>
+
+                <div class="input-group-costum mb-3">
+                    <span class="icon">
+                        <i class="bi bi-lock-fill"></i>
+                    </span>
+                    <input type="password" formControlName="password" class="form-control" placeholder="Contraseña">
+                </div>
+                <small class="text-danger d-block mb-3" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+                    La contraseña es requerida
+                </small>
+
+                <button type="submit" class="btn-btn-signup w-100 mb-3" [disabled]="loginForm.invalid">Acceder</button>
+
+                <div class="d-flex justify-content-between footer-links">
+                    <a href="#">¿No te acuerdas?</a>
+                    <a routerLink="/register">Registrarse</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

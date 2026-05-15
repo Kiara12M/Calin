@@ -1,0 +1,38 @@
+<div class="container mt-5 mb-5 register-container">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="register-card shadow-lg p-4">
+                <h3 class="text-center mb-4 section-titulo">¡REGÍSTRATE!</h3>
+
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="registerForm">
+                    <div class="form-group mb-3">
+                        <input type="text" formControlName="nombre" class="form-control rounded-pill glass-input" placeholder="Nombre">
+                        <small class="text-danger" *ngIf="registerForm.get('nombre')?.touched && registerForm.get('nombre')?.invalid">El nombre es requerido</small>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" formControlName="apellidos" class="form-control rounded-pill glass-input" placeholder="Apellidos">
+                        <small class="text-danger" *ngIf="registerForm.get('apellidos')?.touched && registerForm.get('apellidos')?.invalid">El apellido es requerido</small>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="email" formControlName="email" class="form-control rounded-pill glass-input" placeholder="Correo electrónico">
+                        <small class="text-danger" *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid">Ingresa un correo válido</small>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="password" formControlName="password" class="form-control rounded-pill glass-input" placeholder="Contraseña">
+                        <small class="text-danger" *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid">La contraseña debe tener al menos 6 caracteres</small>
+                    </div>
+                    <div class="form-group mb-4">
+                        <input type="password" formControlName="confirmPassword" class="form-control rounded-pill glass-input" placeholder="Confirmar contraseña">
+                        <small class="text-danger" *ngIf="registerForm.errors?.['mismatch'] && registerForm.get('confirmPassword')?.touched">Las contraseñas no coinciden</small>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark w-100 rounded-pill btn-btn-signup" [disabled]="registerForm.invalid">Crear Cuenta</button>
+                </form>
+                <p class="text-center mt-3 text-muted">
+                    ¿Ya tienes cuenta?
+                    <a routerLink="/login" class="link-custom">Inicia sesión aquí</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
