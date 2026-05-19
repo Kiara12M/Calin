@@ -1,6 +1,10 @@
 import django
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'CalinDjango.settings')
+
+import sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 django.setup()
 
 from django.contrib.auth import get_user_model
